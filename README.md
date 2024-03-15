@@ -21,7 +21,6 @@ As shown in Fig. 1, the time-frequency representation of these waveforms shows d
 datagen-sngw-genrel
 |___ Codes
      |___ Noise_Explorer.ipynb
-     |___ Populations_Explorer.ipynb
      |___ Process_GenRelWaveforms.ipynb
      |___ Toolbox.py
      |___ WaveformGenRel_Explorer.ipynb
@@ -43,15 +42,13 @@ Run the Jupyter notebooks in the following order:
 
 `Process_GenRelWaveforms.ipynb` for applying injections, data conditioning (whitened, band-pass filtering), and generating a dataset of window strain samples. Each one of these windows has the same length Twin<4,096s, contains noise plus a general relativistic CCSN waveform, and is saved in a .txt file. In addition, a log.dat file is saved which contains information about injected signals in all windows.
 
-`Populations_Explorer.ipynb` for exploring the distribution of SNR values, HFF slopes, and waveform durations. This information is loaded from log.data file. SNR values are computed from the strain samples containing noise, and other quantities from waveforms before being injected.
-
 In addition, the code `Toolbox.py` is included, which contains specific functions for the notebooks.
 
 # Important instructions
 
 1. All scripts were run locally, then you will need to edit path locations in cells for read files. The general relativistic waveforms used in this work are available in the public folder [Waveforms_orig](https://drive.google.com/drive/folders/1IIUoJQ5gyzyqX7q3UhA53ws6la35QXE9?usp=sharing). Download this folder and locate it in your local machine as shown in the tree detailed in implementation structure.
 
-2. In the input of `WaveformGenRel_Explorer.ipynb` script (subsection 0.2), you can set the distance from the CCSN through the input parameter set_distance. Depending on this value (and the noise realization), the distribution of SNR values can change. To explore this distribution, run the `Populations.ipynb` script.
+2. In the input of `WaveformGenRel_Explorer.ipynb` script (subsection 0.2), you can set the distance from the CCSN through the input parameter set_distance. Depending on this value (and the noise realization), the distribution of SNR values alongthe datasets can change.
 
 3. In `Process_GenRelWaveforms.ipynb`, a specific waveform is selected to be injected in a noise strain data segment. Each injection is performed in a location inj_time +/- jitter (in seconds), in which jitter is a random value in the range [inj_time - jitter_lim, inj_time + jitter_lim]. Jitter_lim is also an input parameter that can be set in subsection 2.1 (ensure that jim_lim << dt_inj).
 
