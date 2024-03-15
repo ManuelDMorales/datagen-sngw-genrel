@@ -34,3 +34,7 @@ Run the Jupyter notebooks in the following order:
 `WaveformGenRel_Explorer.ipynb` for analyzing and preparing general relativistic waveforms. Their morphologies in the time domain and the time-frequency domain are explored. Scalograms (applying Morlet wavelet transform) are plotted. Resampling and rescaling are also applied, to have dimensionless strain time series with a sampling frequency of 4,094Hz. In addition, estimation HFF slopes are performed and, finally, other features are removed/filtered to save the waveforms such that they only have the HFF.
 
 In addition, the file `Toolbox.py` is included, which contains specific functions for the notebooks.
+
+# Important instructions
+
+1. All scripts were run locally, then you will need to edit path locations in cells for read files. The general relativistic waveforms used in this work are available in the public folder [Waveforms_mod](https://drive.google.com/drive/folders/1GuOWzGEHlAedqWZcCAShcAanpDnC1bIy?usp=sharing). Download this folder and locate it in your local machine as shown in the tree detailed in implementation structure.
