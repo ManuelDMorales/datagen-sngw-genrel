@@ -21,8 +21,15 @@ As shown in Fig. 1, the time-frequency representation of these waveforms shows d
 datagen-sngw-genrel
 |___ Codes
      |___ Noise_Explorer.ipynb
+     |___ Populations_Explorer.ipynb
+     |___ Process_GenRelWaveforms.ipynb
      |___ Toolbox.py
      |___ WaveformGenRel_Explorer.ipynb
+|___ Datasets
+|___ Waveforms_mod
+     |___ GenRel
+|___ Waveforms_orig
+     |___ GenRel
 |___ LICENCE
 |___ README.md
 ```
@@ -33,7 +40,11 @@ Run the Jupyter notebooks in the following order:
 
 `WaveformGenRel_Explorer.ipynb` for analyzing and preparing general relativistic waveforms. Their morphologies in the time domain and the time-frequency domain are explored. Scalograms (applying Morlet wavelet transform) are plotted. Resampling and rescaling are also applied, to have dimensionless strain time series with a sampling frequency of 4,094Hz. In addition, estimation HFF slopes are performed and, finally, other features are removed/filtered to save the waveforms such that they only have the HFF.
 
-In addition, the file `Toolbox.py` is included, which contains specific functions for the notebooks.
+`Process_GenRelWaveforms.ipynb` for applying injections, data conditioning (whitened, band-pass filtering), and generating a dataset of window strain samples. Each one of these windows has the same length Twin<4,096s, contains noise plus a general relativistic CCSN waveform, and is saved in a .txt file. In addition, a log.dat file is saved which contains information about injected signals in all windows.
+
+`Populations_Explorer.ipynb` for exploring the distribution of SNR values, HFF slopes, and waveform durations. This information is loaded from log.data file. SNR values are computed from the strain samples containing noise, and other quantities from waveforms before being injected.
+
+In addition, the code `Toolbox.py` is included, which contains specific functions for the notebooks.
 
 # Important instructions
 
