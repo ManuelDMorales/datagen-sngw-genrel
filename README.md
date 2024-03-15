@@ -27,6 +27,7 @@ datagen-sngw-genrel
      |___ WaveformGenRel_Explorer.ipynb
 |___ Datasets
 |___ Waveforms_mod
+     |___ Phen
      |___ GenRel
 |___ Waveforms_orig
      |___ GenRel
@@ -48,4 +49,16 @@ In addition, the code `Toolbox.py` is included, which contains specific function
 
 # Important instructions
 
-1. All scripts were run locally, then you will need to edit path locations in cells for read files. The general relativistic waveforms used in this work are available in the public folder [Waveforms_mod](https://drive.google.com/drive/folders/1GuOWzGEHlAedqWZcCAShcAanpDnC1bIy?usp=sharing). Download this folder and locate it in your local machine as shown in the tree detailed in implementation structure.
+1. All scripts were run locally, then you will need to edit path locations in cells for read files. The general relativistic waveforms used in this work are available in the public folder [Waveforms_orig](https://drive.google.com/drive/folders/1IIUoJQ5gyzyqX7q3UhA53ws6la35QXE9?usp=sharing). Download this folder and locate it in your local machine as shown in the tree detailed in implementation structure.
+
+2. In the input of `WaveformGenRel_Explorer.ipynb` script (subsection 0.2), you can set the distance from the CCSN through the input parameter set_distance. Depending on this value (and the noise realization), the distribution of SNR values can change. To explore this distribution, run the `Populations.ipynb` script.
+
+3. In `Process_GenRelWaveforms.ipynb`, a specific waveform is selected to be injected in a noise strain data segment. Each injection is performed in a location inj_time +/- jitter (in seconds), in which jitter is a random value in the range [inj_time - jitter_lim, inj_time + jitter_lim]. Jitter_lim is also an input parameter that can be set in subsection 2.1 (ensure that jim_lim << dt_inj).
+
+4. The time window duration of window strain samples is Twin = wf_max + alpha, where wf_max is the duration of the longest injected waveform in the previous project [datagen-sngw-phen](https://github.com/ManuelDMorales/datagen-sngw-phen), where alpha is an input parameter. Then, to appropriately run the `Process_GenRelWaveforms.ipynb` script, download the public subfolder [Phen](https://drive.google.com/drive/folders/1zBhZcY6Gesn3Tsdb4psPeH4uPLRHGH5s?usp=sharing) and locate it inside the folder Waveforms_mod shown in the tree of implementation structure.
+   
+5. If you want to change the duration of window samples, you can change alpha input parameter in subsection 4.1 of `Process_PhenWaveforms.ipynb` script. Moreover, if you want to change the value of wf_max (for instance, only considering the injected general relativistic waveforms), you can put the new value in subsection 4.2 of the aforementioned script.
+
+6. Before running `Process_PhenWaveforms.ipynb` to perform injections (and to generate window samples) covering a whole noise segment of 4,096s, it is highly recommendable to apply it only on a reduced segment of a few tens of seconds. To perform this check, set reduce_segment=1 and reduced_time_n equal to the duration (in seconds) of the reduced segment, in subsection 2.1 of the script.
+   
+7. For the check previously mentioned, it is also useful to set input parameters doplot_spectrogram=1 (subsection 3.4.1) and set_doplots=1 (subsection 4.1). This output plots of windows samples in time and time-frequency domains. Only set this when working with a reduced segment; outputting plots working with the complete segment of 4,096s considerably slows down the script execution. 
