@@ -17,7 +17,7 @@ We draw on three openly distributed waveforms from three CCSN numerical relativi
 
 The time-frequency representation of these waveforms shows different features, and the most important (in terms of energy) is the High Frequency Feature (HFF). This feature has an increasing monotonic frequency profile in time, which, at first order, can be considered linear. Based on state-of-the-art CCSN models, the HFF feature carries information about the pulsation of the proto-neutron star (PNS) created in the CCSN. For this implementation, we filtered all features other than the HFF in the waveforms, and then we injected the resulting filtered waveforms into the noise segments. Like the implementation developed in our project [datagen-sngw-phen](https://github.com/ManuelDMorales/datagen-sngw-phen), we chose these waveforms because their HFF slope belongs to three classes defined there, respectively: Andresen (class 1, 1,620 =< HFF slope =< 4,990), Morozova (class 2, 1,450 =< HFF slope < 1,620), and Cerda-Duran (class 3, 950 =< HFF slope < 1,450).
 
-Fig. 1 shows the HFF of the three general relativistic waveforms used in this work, i.e., the waveforms after removal/filter of features other than HFF, in the time-frequency domain.
+Fig. 1 shows the HFF of the three general relativistic waveforms used in this work in the time-frequency domain, i.e., the waveforms after removal/filter of features other than HFF.
 
 ![GenRel_WF](Pictures/modified_waveforms_genrel.jpg)
 <b>Figure 1</b>. Scalograms (based on a Morlet Wavelet Transform) showing the HFF of the three general relativistic waveforms used in this work.
