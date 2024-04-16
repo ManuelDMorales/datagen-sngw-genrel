@@ -25,18 +25,18 @@ Fig. 1 shows the HFF of the three general relativistic waveforms used in this wo
 # Implementation structure
 
 ```
-datagen-sngw-genrel
-|___ Codes
+datagen-sngw-genrel/
+|___ Codes/
      |___ Noise_Explorer.ipynb
      |___ Process_GenRelWaveforms.ipynb
      |___ Toolbox.py
      |___ WaveformGenRel_Explorer.ipynb
-|___ Datasets
-|___ Waveforms_mod
-     |___ Phen
-     |___ GenRel
-|___ Waveforms_orig
-     |___ GenRel
+|___ Datasets/
+|___ Waveforms_mod/
+     |___ Phen/
+     |___ GenRel/
+|___ Waveforms_orig/
+     |___ GenRel/
 |___ LICENCE
 |___ README.md
 ```
