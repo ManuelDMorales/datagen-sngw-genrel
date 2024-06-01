@@ -67,6 +67,21 @@ In addition, the code `Toolbox.py` is included, which contains specific function
    
 7. For the check previously mentioned, it is also useful to set input parameters doplot_spectrogram=1 (subsection 3.4.1) and set_doplots=1 (subsection 4.1). This output plots of windows samples in time and time-frequency domains. Only set this when working with a reduced segment; outputting plots working with the complete segment of 4,096s considerably slows down the script execution.
 
+# Cite this work
+
+If you use this software in your work, please cite it using the following metadata:
+
+```
+@software{Morales_datagen-sngw-genrel_2024,
+author = {Morales, Manuel David},
+month = jun,
+title = {{datagen-sngw-genrel}},
+url = {https://github.com/ManuelDMorales/datagen-sngw-genrel},
+version = {1.0.0},
+year = {2024}
+}
+```
+
 # About GPL-3.0 licence
 
 Notice this code is shared under a GNU General Public Licence 3.0, which is a strong copyleft license. It means that any copy or modification of the original software must also be released under the GPL-3.0. The choice of this licence is aligned to Open Science practices. More details about GPL-3.0 in the `README.md` file of the repository. We also suggest to see the [UNESCO Recomendation on Open Science](https://www.unesco.org/en/open-science/about?hub=686).
