@@ -19,7 +19,7 @@ The time-frequency representation of these waveforms shows different features, a
 Fig. 1 shows the three general relativistic waveforms used in this work in the time-frequency domain.
 
 ![GenRel_WF](Pictures/waveforms_genrel.jpg)
-<b>Figure 1</b>. Scalograms (based on a Morlet Wavelet Transform) showing the HFF of the three general relativistic waveforms used in this work. To see the features more clearly, the power amplitude is shown using a logarithmic scale.
+<b>Figure 1</b>. Scalograms (based on a Morlet Wavelet Transform) showing the HFF of the three general relativistic waveforms used in this work. To clearly see the features in the scalograms, the power amplitude is shown using a logarithmic scale.
 
 # Implementation structure
 
