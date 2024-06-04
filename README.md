@@ -72,7 +72,7 @@ If you use this software in your work, please cite it using the following metada
 
 ```
 @software{Morales_datagen-sngw-genrel_2024,
-author = {Morales, Manuel David},
+author = {Morales, Manuel D.},
 month = jun,
 title = {{datagen-sngw-genrel}},
 url = {https://github.com/ManuelDMorales/datagen-sngw-genrel},
